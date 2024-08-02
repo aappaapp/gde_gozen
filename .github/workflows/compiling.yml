@@ -1,0 +1,9 @@
+name: Compiling
+on: [push]
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile
+        run: scons -j1 target=template_debug platform=linux arch=x86_64
