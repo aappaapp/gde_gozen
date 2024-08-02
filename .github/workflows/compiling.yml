@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: recursive
       - uses: actions/setup-python@v5
       - run: pip install scons
       - run: scons -j1 target=template_debug platform=linux arch=x86_64
