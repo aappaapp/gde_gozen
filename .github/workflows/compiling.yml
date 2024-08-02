@@ -9,4 +9,4 @@ jobs:
           submodules: recursive
       - uses: actions/setup-python@v5
       - run: pip install scons
-      - run: scons -j1 target=template_debug platform=linux arch=x86_64
+      - run: scons -j4 target=template_debug platform=linux arch=x86_64
